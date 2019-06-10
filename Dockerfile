@@ -8,9 +8,7 @@ RUN apt-get update && \
     php-pear \
     php5-gd \
     php5-curl \
-# install tzdata package which is a dependency and set the timezone to prevent prompt$
-    tzdata \
-# set your timezone here
+    tzdata\
     && \
     ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime \
     dpkg-reconfigure --frontend noninteractive tzdata \
@@ -27,4 +25,5 @@ EXPOSE 80 443
 
 COPY main.sh /
 ENTRYPOINT ["/main.sh"]
+
 

@@ -8,3 +8,6 @@ do
     tail -f /var/log/apache2/*.log
     exit 0
 done
+
+
+
