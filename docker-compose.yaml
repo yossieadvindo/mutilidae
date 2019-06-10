@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  mutillidae:
+    build: .
+    ports:
+      - 8080:80
+      - 8483:443
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DB: mutillidae
+      MYSQL_HOST: mutillidae.chj1gfvfyh6t.us-east-1.rds.amazonaws.com
+      MYSQL_NAME: mutillidae
+    restart: always
+  web:
+    image: 'bitnami/apache:latest'
+    ports:
+      - "80:80"
+    restart: always
+
+
