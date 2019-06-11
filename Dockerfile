@@ -17,6 +17,7 @@ RUN apt-get update && \
 
 COPY php.ini /etc/php5/apache2/php.ini
 COPY mutillidae /var/www/html
+COPY MySQLHandler.php /var/www/html/classes/MySQLHandler.php 
 
 RUN chown www-data:www-data -R /var/www/html && \
     rm /var/www/html/index.html
