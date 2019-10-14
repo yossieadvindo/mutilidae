@@ -10,3 +10,4 @@ sudo unzip NOT-LATEST-MUTILLIDAE-MOVED-TO-GITHUB-mutillidae-2.6.67.zip
 cp mutillidae /mutilidae
 
 references : https://github.com/dennisMeeQ/mutillidae-docker.git
+can also use webgoat
